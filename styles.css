@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+
+/* COLORS */
+
+/* PRIMARY COLORS */
+
+--clr-primary-pale-blue: hsl(225, 100%, 94%);
+--clr-primary-bright-blue: hsl(245, 75%, 52%);
+
+/* NEUTRAL COLORS */
+
+--clr-neutral-blue-100: hsl(225, 100%, 98%);
+--clr-neutral-blue-300: hsl(224, 23%, 55%);
+--clr-neutral-blue-800: hsl(223, 47%, 23%);
+
+/* FONTS */
+
+--ff-main: 'Red Hat Display', sans-serif;
+
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url(images/pattern-background-mobile.svg), var(--clr-primary-pale-blue);
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: var(--ff-main);
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  max-width: 445px;
+  margin-inline: 1.5em;
+}
+
+.card__img-holder img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.card__body {
+  text-align: center;
+}
+
+.title {
+  color: var(--clr-neutral-blue-800);
+  font-size: 1.4rem;
+  font-weight: 900;
+  padding-block: 1.3em .8em; 
+}
+
+.text {
+  color: var(--clr-neutral-blue-300);
+  line-height: 1.6;
+  font-size: .95rem;
+  padding-inline: 2.1em;
+  padding-block-end: 1.4em;
+}
+
+.plan-box {
+  background: var(--clr-neutral-blue-100);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-inline: 1.5em;
+  margin-block-end: 1.5em;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+.plan-box-left {
+  display: flex;
+}
+
+.plan-details {
+  display: flex;
+  flex-direction: column;
+  padding-inline-start: 1.2em;
+}
+
+.plan-details h3 {
+  color: var(--clr-neutral-blue-800);
+  font-size: .9rem;
+}
+
+.plan-details p {
+  color: var(--clr-neutral-blue-300);
+  font-size: .9em;
+}
+
+.plan-box-right a {
+  color: var(--clr-primary-bright-blue);
+  font-weight: 700;
+  font-size: .8rem;
+}
+
+
+/* BUTTONS */
+
+.button-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: .5em;
+  margin-block-end: 1.5em;
+}
+
+.btn {
+  all: unset;
+  display: block;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: .95rem;
+  font-weight: 700;
+  margin-inline: 1.5em;
+  padding: 1em;
+}
+
+.payment-btn {
+  background: var(--clr-primary-bright-blue);
+  color: white;
+  box-shadow: 0 10px 20px 0 hsla(245, 75%, 52%, .25);
+}
+
+.cancel-btn {
+  color: var(--clr-neutral-blue-300);
+}
+
+@media (min-width: 600px) {
+
+  body {
+    background: url(images/pattern-background-desktop.svg), var(--clr-primary-pale-blue);
+    background-repeat: no-repeat;
+  }
+}
+
