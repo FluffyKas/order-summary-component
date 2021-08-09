@@ -21,6 +21,8 @@
 
 }
 
+/* GENERAL STYLES */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -29,6 +31,8 @@
 
 body {
   background: url(images/pattern-background-mobile.svg), var(--clr-primary-pale-blue);
+  background-repeat: no-repeat;
+  background-size: contain;
   min-height: 100vh;
   display: grid;
   place-items: center;
@@ -38,16 +42,21 @@ body {
 .card {
   background: white;
   border-radius: 20px;
+  box-shadow: 0 15px 25px 0 hsla(245, 75%, 52%, .11);
   overflow: hidden;
-  max-width: 445px;
+  max-width: 440px;
   margin-inline: 1.5em;
 }
+
+/* CARD IMAGE */
 
 .card__img-holder img {
   display: block;
   max-width: 100%;
   height: auto;
 }
+
+/* CARD BODY */
 
 .card__body {
   text-align: center;
@@ -68,6 +77,8 @@ body {
   padding-block-end: 1.4em;
 }
 
+/* PLAN BOX */
+
 .plan-box {
   background: var(--clr-neutral-blue-100);
   display: flex;
@@ -86,7 +97,10 @@ body {
 .plan-details {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   padding-inline-start: 1.2em;
+  gap: .2em;
+  text-align: left;
 }
 
 .plan-details h3 {
@@ -96,13 +110,19 @@ body {
 
 .plan-details p {
   color: var(--clr-neutral-blue-300);
-  font-size: .9em;
+  font-size: .8rem;
 }
 
 .plan-box-right a {
   color: var(--clr-primary-bright-blue);
   font-weight: 700;
   font-size: .8rem;
+  opacity: 1;
+  transition: all .2s ease;
+}
+
+.plan-box-right a:hover {
+  opacity: .8;
 }
 
 
@@ -113,7 +133,7 @@ body {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  gap: .5em;
+  gap: .65em;
   margin-block-end: 1.5em;
 }
 
@@ -131,18 +151,65 @@ body {
 .payment-btn {
   background: var(--clr-primary-bright-blue);
   color: white;
-  box-shadow: 0 10px 20px 0 hsla(245, 75%, 52%, .25);
+  box-shadow: 0 15px 20px 0 hsla(245, 75%, 52%, .25);
+  opacity: 1;
+  transition: all .2s ease;
+}
+
+.payment-btn:hover {
+  opacity: .8;
 }
 
 .cancel-btn {
   color: var(--clr-neutral-blue-300);
+  transition: color .2s ease;
 }
+
+.cancel-btn:hover {
+  color: var(--clr-neutral-blue-800);
+}
+
+/* MEDIA QUERIES */
 
 @media (min-width: 600px) {
 
   body {
     background: url(images/pattern-background-desktop.svg), var(--clr-primary-pale-blue);
     background-repeat: no-repeat;
+    background-size: contain;
   }
+
+  .title {
+    font-size: 1.7rem;
+    padding-block: 1.7em .7em;
+  }
+
+  .text {
+    font-size: 1.05rem;
+    padding-inline: 3em;
+  }
+
+  .plan-box {
+    margin-inline: 3em;
+    margin-block-end: 2em;
+    padding: 1.5em;
+  }
+
+  .plan-details h3 {
+    font-size: 1.05rem;
+  }
+
+  .plan-details p {
+    font-size: 1.05rem;
+  }
+
+  .plan-box-right a {
+    font-size: .9rem;
+  }
+
+  .btn {
+    margin-inline: 3em;
+  }
+
 }
 
