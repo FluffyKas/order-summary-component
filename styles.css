@@ -44,8 +44,9 @@ body {
   border-radius: 20px;
   box-shadow: 0 15px 25px 0 hsla(245, 75%, 52%, .11);
   overflow: hidden;
-  max-width: 440px;
-  margin-inline: 1.5em;
+  max-width: 27.5rem;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
 }
 
 /* CARD IMAGE */
@@ -66,15 +67,14 @@ body {
   color: var(--clr-neutral-blue-800);
   font-size: 1.4rem;
   font-weight: 900;
-  padding-block: 1.3em .8em; 
+  padding: 1.3em 0 .8em 0; 
 }
 
 .text {
   color: var(--clr-neutral-blue-300);
   line-height: 1.6;
   font-size: .95rem;
-  padding-inline: 2.1em;
-  padding-block-end: 1.4em;
+  padding: 0 2.1em 1.4em 2.1em;
 }
 
 /* PLAN BOX */
@@ -84,8 +84,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-inline: 1.5em;
-  margin-block-end: 1.5em;
+  margin: 0 1.5em 1.5em 1.5em;
   padding: 1em;
   border-radius: 10px;
 }
@@ -98,7 +97,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-inline-start: 1.2em;
+  padding-left: 1.2em;
   gap: .2em;
   text-align: left;
   font-size: .7rem;
@@ -152,7 +151,7 @@ body {
   justify-content: center;
   text-align: center;
   gap: .65em;
-  margin-block-end: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 .btn {
@@ -162,7 +161,8 @@ body {
   cursor: pointer;
   font-size: .95rem;
   font-weight: 700;
-  margin-inline: 1.5em;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
   padding: 1em;
 }
 
@@ -216,17 +216,18 @@ body {
 
   .title {
     font-size: 1.7rem;
-    padding-block: 1.7em .7em;
+    padding-top: 1.7em;
+    padding-bottom: .7em;
   }
 
   .text {
     font-size: 1.05rem;
-    padding-inline: 3em;
+    padding-left: 3em;
+    padding-right: 3em;
   }
 
   .plan-box {
-    margin-inline: 3em;
-    margin-block-end: 2em;
+    margin: 0 3em 2em 3em;
     padding: 1.5em;
   }
 
@@ -243,7 +244,8 @@ body {
   }
 
   .btn {
-    margin-inline: 3em;
+    margin-left: 3em;
+    margin-right: 3em;
   }
 
 }
